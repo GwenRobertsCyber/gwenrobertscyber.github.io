@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title>Lab 03 | Web Portfolio</title>
+  <style>
+    body {
+      background-color: #1a1a1d;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .labContainer {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #1f2833;
+      border-top: 4px solid #50c878;
+      border-radius: 8px;
+    }
+    h1, h2, h3 { color: #50c878; }
+    .codeBlock {
+      background-color: #0b0c10;
+      padding: 15px;
+      border-left: 3px solid #2e8b57;
+      font-family: monospace;
+      overflow-x: auto;
+      color: #c5c6c7;
+    }
+    .backLink {
+      color: #50c878;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .backLink:hover { color: #2e8b57; }
+    <div class="assignmentCard">
+        <h4>Lab 01 File Signature Analysis with WinHex</h4>
+        
+        <div class="starRating">
+          <span class="starFilled">★</span>
+          <span class="starFilled">★</span>
+          <span class="starFilled">★</span>
+          <span class="starFilled">★</span>
+          <span class="starEmpty">★</span>
+          <span class="reviewText">(42 reviews)</span>
+        </div>
+
+        <p><strong>Objective:</strong> Identify the true file type of a disguised file.</p>
+        <p><strong>Instructions:</strong> I have provided a sample file that looks like a standard image but is actually something else. Use WinHex to look at the hex header and figure out the real file extension. This is a great intro to digital forensics!</p>
+        <a href="#linkToFile">Download Lab Files</a>
+      </div>
+  </style>
+</head>
+<body>
+  <div class="labContainer">
+    <a href="index.html" class="backLink">&lt; Back to Portfolio</a>
+    
+    <h1>Lab 03: Code a Secure Web Portfolio from Scratch</h1>
+    <p><strong>Time Estimate:</strong> 45-60 minutes</p>
+    
+    <h2>Objective</h2>
+    <p>Learn to read and write fundamental HTML and CSS by building a static web page without relying on vulnerable third-party plugins or site builders.</p>
+
+    <h2>Part 1: The Setup</h2>
+    <p>We are avoiding heavy software for this lab. You only need a text editor and a web browser.</p>
+    <ul>
+      <li>Create a new folder on your desktop called <code>MyPortfolio</code>.</li>
+      <li>Open your text editor (like Visual Studio Code or Notepad) and create a new file named <code>index.html</code> inside that folder.</li>
+    </ul>
+
+    <h2>Part 2: The HTML Skeleton</h2>
+    <p>HTML (HyperText Markup Language) is the bone structure of the internet. We use "tags" to tell the browser what kind of content we are displaying. Type (do not copy/paste!) the following code into your index file to practice reading the syntax:</p>
+    
+    <div class="codeBlock">
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;h1&gt;My Name&lt;/h1&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;I am learning cybersecurity and web development.&lt;/p&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+    </div>
+
+    <h2>Part 3: Adding Style with CSS</h2>
+    <p>CSS (Cascading Style Sheets) is the paint and interior design. Without it, the web is just black text on a white background. Let's add a "style" section right above our body tag to make it look professional.</p>
+
+    <div class="codeBlock">
+&lt;style&gt;<br>
+&nbsp;&nbsp;body {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;background-color: #1a1a1d;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color: #50c878;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font-family: sans-serif;<br>
+&nbsp;&nbsp;}<br>
+&lt;/style&gt;
+    </div>
+
+    <h2>Part 4: Test Your Code</h2>
+    <p>Save your <code>index.html</code> file. Now, simply double-click that file in your folder. It will open in your web browser. If you typed everything correctly, you should see a dark background with green text.</p>
+
+    <h2>Homework Challenge</h2>
+    <p>Now that you know how tags work, look up how to use an <code>&lt;a&gt;</code> tag and try adding a link to your favorite tech news site into your code!</p>
+  </div>
+</body>
+</html>

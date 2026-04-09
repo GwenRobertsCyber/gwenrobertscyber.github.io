@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>Lab 01 | File Signature Analysis</title>
+  <style>
+    body {
+      background-color: #1a1a1d;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .labContainer {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #1f2833;
+      border-top: 4px solid #50c878;
+      border-radius: 8px;
+    }
+    h1, h2, h3 { color: #50c878; }
+    .codeBlock {
+      background-color: #0b0c10;
+      padding: 15px;
+      border-left: 3px solid #2e8b57;
+      font-family: monospace;
+      overflow-x: auto;
+      color: #c5c6c7;
+      white-space: pre-wrap;
+    }
+    .backLink {
+      color: #50c878;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .backLink:hover { color: #2e8b57; }
+  </style>
+</head>
+<body>
+  <div class="labContainer">
+    <a href="index.html" class="backLink">&lt; Back to Portfolio</a>
+    
+    <h1>Lab 01: File Signature Analysis with WinHex</h1>
+    <p><strong>Time Estimate:</strong> 20 to 30 minutes</p>
+    
+    <h2>Objective</h2>
+    <p>Learn how to identify the true nature of a file by examining its magic bytes (file header) rather than relying on the file extension.</p>
+
+    <h2>The Scenario</h2>
+    <p>During a mock investigation, you seized a suspect's flash drive. The suspect claimed it only contained system logs, and you found a file named <code>system_log.txt</code>. However, when you open it in a text editor, it is just a bunch of scrambled, unreadable characters. You suspect the file extension was intentionally changed to hide illicit data.</p>
+
+    <h2>Part 1: The Hex Dump</h2>
+    <p>Below is a simulated hexadecimal dump of the first few bytes of that suspicious file. Highlight and copy this hex data.</p>
+    
+    <div class="codeBlock">
+Offset(h) 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+00000000  89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52
+00000010  00 00 03 20 00 00 01 C2 08 06 00 00 00 1E 3D D8
+00000020  A2 00 00 20 00 49 44 41 54 78 5E EC DD 77 58 54
+    </div>
+
+    <h2>Part 2: The Investigation</h2>
+    <ul>
+      <li>Open your hex editor (like WinHex or an online tool like HexEd.it).</li>
+      <li>Look specifically at the first 4 to 8 bytes of the file (the "Magic Bytes").</li>
+      <li>Use a file signature database (like Gary Kessler's File Signature Table) to look up what file type corresponds to those starting hex values.</li>
+    </ul>
+
+    <h2>Homework Challenge</h2>
+    <p>Once you identify the true file type, rename the file on your local machine with the correct extension. What kind of file was the suspect actually trying to hide from you?</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+<head>
+  <title>Lab 02 | Secure Enclave</title>
+  <style>
+    body {
+      background-color: #1a1a1d;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .labContainer {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #1f2833;
+      border-top: 4px solid #50c878;
+      border-radius: 8px;
+    }
+    h1, h2, h3 { color: #50c878; }
+    .codeBlock {
+      background-color: #0b0c10;
+      padding: 15px;
+      border-left: 3px solid #2e8b57;
+      font-family: monospace;
+      overflow-x: auto;
+      color: #c5c6c7;
+    }
+    .backLink {
+      color: #50c878;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .backLink:hover { color: #2e8b57; }
+  </style>
+</head>
+<body>
+  <div class="labContainer">
+    <a href="index.html" class="backLink">&lt; Back to Portfolio</a>
+    
+    <h1>Lab 02: Advanced Secure Enclave Configuration</h1>
+    <p><strong>Time Estimate:</strong> 60 to 90 minutes</p>
+    
+    <h2>Objective</h2>
+    <p>Configure an isolated virtual machine environment suitable for malware analysis or handling controlled unclassified information. This simulates the strict air gapped standards used by major aerospace and defense contractors.</p>
+
+    <h2>Part 1: The Air Gap Network</h2>
+    <p>When dealing with volatile files, your VM cannot have any bridge to your physical network. We need to create a custom Host Only network.</p>
+    <ul>
+      <li>Open VMware Workstation and go to the Virtual Network Editor.</li>
+      <li>Create a new custom VMnet and select Host Only.</li>
+      <li>Crucial Step: Uncheck the box that says connect a host virtual adapter to this network. This severs the tie to your physical machine.</li>
+      <li>Disable local DHCP service to prevent automatic IP assignment.</li>
+    </ul>
+
+    <h2>Part 2: Hypervisor Hardening</h2>
+    <p>Advanced malware can sometimes escape the virtual machine if the hypervisor tools are left open. We need to lock the borders.</p>
+    <ul>
+      <li>Go into your VM settings before booting.</li>
+      <li>Navigate to the Options tab and select Guest Isolation.</li>
+      <li>Disable both Enable drag and drop and Enable copy and paste.</li>
+      <li>Ensure Shared Folders are completely disabled.</li>
+    </ul>
+
+    <h2>Part 3: The Pristine Baseline</h2>
+    <p>Before you introduce any suspicious files, you must freeze the system state so you have a clean slate to return to.</p>
+    <ul>
+      <li>Boot the VM and apply all necessary OS security updates.</li>
+      <li>Power the VM down.</li>
+      <li>Take a snapshot and name it Base Clean Image DO NOT DELETE.</li>
+    </ul>
+
+    <h2>Homework Challenge</h2>
+    <p>Now that your single machine is isolated, deploy a second virtual machine running REMnux or Kali Linux on that exact same custom VMnet. Configure static IP addresses for both machines and use Wireshark on the Linux machine to prove they can communicate with each other but absolutely cannot reach the outside internet!</p>
+  </div>
+</body>
+</html>
