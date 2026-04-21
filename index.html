@@ -1,11 +1,11 @@
 <html>
 <head>
-  <title>Gwen Roberts | Cybersecurity Portfolio</title>
+  <title>Gwendolyn Roberts | Cybersecurity Portfolio</title>
   <style>
     body {
       background-color: #1a1a1d;
       color: #e0e0e0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
@@ -13,7 +13,7 @@
 
     .mainHeader {
       background-color: #0b0c10;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
       border-bottom: 2px solid #50c878;
     }
@@ -21,11 +21,17 @@
     .mainHeader h1 {
       color: #50c878;
       margin: 0;
+      font-size: 2.5em;
     }
 
     .mainHeader h2 {
       color: #c5c6c7;
       font-weight: 300;
+      margin-top: 5px;
+    }
+
+    .navMenu {
+      margin-top: 15px;
     }
 
     .navMenu a {
@@ -33,10 +39,24 @@
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
     }
 
     .navMenu a:hover {
-      color: #2e8b57;
+      background-color: #1f2833;
+      color: #50c878;
+    }
+
+    .navMenu a.resumeBtn {
+      background-color: #50c878;
+      color: #0b0c10;
+    }
+
+    .navMenu a.resumeBtn:hover {
+      background-color: #2e8b57;
+      color: #ffffff;
     }
 
     main {
@@ -45,33 +65,50 @@
       margin: auto;
     }
 
-    .aboutSection, .blogSection, .homeworkSection {
+    .aboutSection, .portfolioSection {
       background-color: #1f2833;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
       border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
 
-    .post {
-      background-color: #0b0c10;
-      padding: 15px;
-      border-left: 4px solid #2e8b57;
-      border-radius: 4px;
-      margin-bottom: 15px;
+    h3 {
+      color: #50c878;
+      border-bottom: 1px solid #45a29e;
+      padding-bottom: 10px;
+      margin-top: 0;
     }
 
     .assignmentCard {
       background-color: #0b0c10;
-      padding: 15px;
-      margin-top: 15px;
+      padding: 20px;
+      margin-top: 20px;
       border-left: 4px solid #50c878;
       border-radius: 4px;
     }
 
+    .assignmentCard h4 {
+      margin-top: 0;
+      color: #e0e0e0;
+      font-size: 1.2em;
+    }
+
     .assignmentCard a {
-      color: #50c878;
-      text-decoration: underline;
+      display: inline-block;
+      margin-top: 10px;
+      color: #0b0c10;
+      background-color: #50c878;
+      padding: 8px 15px;
+      text-decoration: none;
       font-weight: bold;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .assignmentCard a:hover {
+      background-color: #2e8b57;
+      color: #ffffff;
     }
 
     .siteFooter {
@@ -79,74 +116,58 @@
       padding: 20px;
       background-color: #0b0c10;
       color: #c5c6c7;
+      border-top: 1px solid #1f2833;
     }
   </style>
 </head>
 <body>
   <header class="mainHeader">
-    <h1>Gwen Roberts</h1>
-    <h2>IT Cybersecurity Professional</h2>
+    <h1>Gwendolyn Roberts</h1>
+    <h2>Digital Forensics & Cybersecurity Analyst</h2>
     <nav class="navMenu">
-      <a href="#about">About</a>
-      <a href="#blog">Defense Blog</a>
+      <a href="#about">Professional Profile</a>
+      <a href="#portfolio">Case Studies</a>
+      <a href="docs/Gwendolyn_Resume.pdf" target="_blank" class="resumeBtn">Download Resume</a>
     </nav>
   </header>
 
   <main>
     <section id="about" class="aboutSection">
-      <h3>About Me</h3>
-      <p>Hey there! I am an IT Cybersecurity student planning to graduate in 2027. My core focus is on digital forensics and learning the best ways to defend networks from modern threats.</p>
-      <p>Right now I am wrapping up my degree and spending most of my free time building out my home labs. I love taking what I read in lectures and actually applying it using tools like WinHex and VMware. I built this portfolio to document my journey in the tech world and to share practice labs with other students who are trying to break into the security industry.</p>
-      <p>Take a look around at my latest blog posts or try out some of the practice assignments I have uploaded!</p>
+      <h3>Professional Profile</h3>
+      <p>I am an IT Cybersecurity professional with hands-on experience in digital evidence imaging, forensic analysis, and secure virtual environments. I am currently completing my Associate of Science in IT Cybersecurity at Antelope Valley College, with plans to transfer to California State University San Marcos.</p>
+      <p>My technical foundation includes utilizing industry-standard tools to analyze vulnerabilities and engineer secure infrastructures. I am highly adaptable and actively seeking entry-level, fully remote, or night-shift Security Operations Center (SOC) and digital forensic roles to provide robust, round-the-clock security monitoring and analysis.</p>
     </section>
 
-    <section id="blog" class="blogSection">
-      <h3>Cyber Defense Blog</h3>
-      <article class="post">
-        <h4>Understanding Network Vulnerabilities Through Practice</h4>
-        <p>As I wrap up my final core cybersecurity classes this semester and shift my focus to finishing my general education requirements, I am taking a moment to reflect on everything I have learned so far. The threat landscape is constantly changing. My ultimate career goal is to work in digital forensics and help protect the US from cyber attacks, and getting there means putting in a lot of practical practice outside of the classroom.</p>
-        <p>Lately, I have been spending my free time setting up secure virtual environments using VMware Workstation and analyzing file signatures with WinHex. It is one thing to read about system vulnerabilities in a textbook, but it is a completely different experience when you are actively digging into the data yourself. I will be sharing some of my mock investigations and home lab setups here as I prepare for graduation next year.</p>
-        <p>Building this foundational knowledge now is going to be so crucial when I transition into the real world. I am honestly super excited to document this journey and see how my skills evolve over the next couple of semesters!</p>
-      </article>
-
-      <article class="post">
-        <h4>Deep Dive into Digital Forensics Exploring WinHex</h4>
-        <p>If there is one area of cybersecurity that completely has my attention right now, it is digital forensics. There is just something incredibly satisfying about treating a compromised system like a digital crime scene. Recently, I have been going hard on learning WinHex in my home lab. Being able to look directly at the hex values of a file and understand what is actually going on under the hood is wild.</p>
-        <p>For a recent personal project, I practiced identifying altered file signatures. Malicious actors will often change file extensions to hide malware, but if you know how to read the hex headers, they cannot hide the true nature of the file. This kind of deep level analysis is exactly what I want to be doing in my career to help secure our national infrastructure. It is definitely a steep learning curve, but taking the time to understand the absolute basics of how data is stored and manipulated is making me a much better investigator.</p>
-        <p>Next up on my lab schedule is trying to recover some purposely deleted files from a corrupted drive image, so I will definitely post an update on how that goes!</p>
-      </article>
-    </section>
-
-    <section id="practiceLabs" class="homeworkSection">
-      <h3>Practice Labs & Assignments</h3>
-      <p>Want to test your own cybersecurity skills? Here are some of the practical assignments I have built for my coursework and personal studies. I am putting these up so anyone visiting can get some hands on experience. Boot up your virtual machines and give these a try!</p>
+    <section id="portfolio" class="portfolioSection">
+      <h3>Hands-On Lab Projects & Case Studies</h3>
+      <p>Below are detailed technical reports demonstrating my methodologies, environmental configurations, and documentation skills.</p>
 
       <div class="assignmentCard">
-        <h4>Lab 01 File Signature Analysis with WinHex</h4>
-        <p><strong>Objective:</strong> Identify the true file type of a disguised file.</p>
-        <p><strong>Instructions:</strong> I have provided a sample file that looks like a standard image but is actually something else. Use WinHex to look at the hex header and figure out the real file extension. This is a great intro to digital forensics!</p>
-        <a href="lab01.html">Start the Lab</a>
+        <h4>Secure Virtual Infrastructure Engineering</h4>
+        <p><strong>Objective:</strong> Engineered secure, isolated lab environments for safe analysis and penetration testing.</p>
+        <p><strong>Environment:</strong> VMware Workstation, Windows, Linux</p>
+        <a href="docs/Creating_a_Virtual_Machine.pdf" target="_blank">View Lab Report (PDF)</a>
       </div>
 
       <div class="assignmentCard">
-        <h4>Lab 02 Secure VM Configuration</h4>
-        <p><strong>Objective:</strong> Set up an isolated environment in VMware Workstation.</p>
-        <p><strong>Instructions:</strong> Build a new virtual machine and configure the network settings so it is completely isolated from your host machine. This is perfect for analyzing potential threats safely without risking your own computer.</p>
-        <a href="lab02.html">View Lab Instructions</a>
+        <h4>Linux Operating System Navigation & Analysis</h4>
+        <p><strong>Objective:</strong> Utilized command-line interfaces and navigated advanced Linux distributions to establish forensic readiness.</p>
+        <p><strong>Environment:</strong> Fedora Linux, CLI</p>
+        <a href="docs/Exploring_the_Fedora_Linux_Interface.pdf" target="_blank">View Lab Report (PDF)</a>
       </div>
 
       <div class="assignmentCard">
-        <h4>Lab 03 Code a Secure Web Portfolio from Scratch</h4>
-        <p><strong>Objective:</strong> Understand the fundamentals of reading and writing raw HTML and CSS to establish a secure, static web presence.</p>
-        <p><strong>Background:</strong> Relying on third-party website builders can introduce unnecessary bloat and potential vulnerabilities. Knowing how to build a static site from scratch gives you ultimate control over your code and infrastructure.</p>
-        <p><strong>Instructions:</strong> You will use a text editor to build a one-page portfolio by writing semantic HTML and styling it with custom CSS. Focus on keeping the code clean and readable.</p>
-        <a href="lab03.html">Start the Lab</a>
+        <h4>Technical Documentation & Environment Configuration</h4>
+        <p><strong>Objective:</strong> Demonstrated proficiency in open-source text editors and system configuration to thoroughly document forensic environments.</p>
+        <p><strong>Environment:</strong> Linux, KWrite</p>
+        <a href="docs/KWrite_Text_Editor.pdf" target="_blank">View Lab Report (PDF)</a>
       </div>
     </section>
   </main>
 
   <footer class="siteFooter">
-    <p>Get in touch for professional inquiries.</p>
+    <p>Professional Portfolio | Lancaster, California</p>
+    <p>gwenroberts180@gmail.com | 661.604.0280</p>
   </footer>
 </body>
 </html>
